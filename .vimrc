@@ -21,19 +21,11 @@ au FileType html setlocal dict+=~/.vim/dict/css.dict
 
 "
 "syntastic相关
-execute pathogen#infect()
-let g:syntastic_python_checkers=['pylint']
-let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
-"golang
 "Processing... % (ctrl+c to stop)
-let g:fencview_autodetect=0
-set rtp+=$GOROOT/misc/vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 显示相关  
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
-set cul "高亮光标所在行
-set cuc
 set shortmess=atI   " 启动的时候不显示那个援助乌干达儿童的提示  
 set go=             " 不要图形按钮  
 "color desert     " 设置背景主题  
@@ -91,16 +83,6 @@ set viminfo+=!
 " 带有如下符号的单词不要被换行分割
 set iskeyword+=_,$,@,%,#,-
 " 字符间插入的像素行数目
-
-"markdown配置
-au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn}   set filetype=mkd
-au BufRead,BufNewFile *.{go}   set filetype=go
-au BufRead,BufNewFile *.{js}   set filetype=javascript
-"rkdown to HTML  
-nmap md :!~/.vim/markdown.pl % > %.html <CR><CR>
-nmap fi :!firefox %.html & <CR><CR>
-nmap \ \cc
-vmap \ \cc
 
 "将tab替换为空格
 nmap tt :%s/\t/    /g<CR>
@@ -420,35 +402,35 @@ Bundle 'gmarik/vundle'
 " original repos on github
 Bundle 'tpope/vim-fugitive'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'Yggdroot/indentLine'
-let g:indentLine_char = '┊'
+"Bundle 'Yggdroot/indentLine'
+"let g:indentLine_char = '┊'
 "ndle 'tpope/vim-rails.git'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 " non github repos
-Bundle 'https://github.com/wincent/command-t.git'
+"Bundle 'https://github.com/wincent/command-t.git'
 Bundle 'Auto-Pairs'
-Bundle 'python-imports.vim'
-Bundle 'CaptureClipboard'
-Bundle 'ctrlp-modified.vim'
-Bundle 'last_edit_marker.vim'
-Bundle 'synmark.vim'
+"Bundle 'python-imports.vim'
+"Bundle 'CaptureClipboard'
+"Bundle 'ctrlp-modified.vim'
+"Bundle 'last_edit_marker.vim'
+"Bundle 'synmark.vim'
 "Bundle 'Python-mode-klen'
-Bundle 'SQLComplete.vim'
-Bundle 'Javascript-OmniCompletion-with-YUI-and-j'
+"Bundle 'SQLComplete.vim'
+"Bundle 'Javascript-OmniCompletion-with-YUI-and-j'
 "Bundle 'JavaScript-Indent'
 "Bundle 'Better-Javascript-Indentation'
-Bundle 'jslint.vim'
-Bundle "pangloss/vim-javascript"
+"Bundle 'jslint.vim'
+"Bundle 'pangloss/vim-javascript'
 Bundle 'Vim-Script-Updater'
 Bundle 'ctrlp.vim'
 Bundle 'tacahiroy/ctrlp-funky'
-Bundle 'jsbeautify'
+"Bundle 'jsbeautify'
 Bundle 'The-NERD-Commenter'
 "django
-Bundle 'django_templates.vim'
-Bundle 'Django-Projects'
+"Bundle 'django_templates.vim'
+"Bundle 'Django-Projects'
 
 "Bundle 'FredKSchott/CoVim'
 "Bundle 'djangojump'
